@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionário</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Cadastro de Funcionário</h2>
+        <form method="POST" action="{% url 'criar_func' %}">
+            {% csrf_token %}  <!-- Para proteção contra CSRF -->
+            
+            <!-- Campo Nome -->
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" maxlength="100">
+            </div>
+
+            <!-- Campo Cargo -->
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <input type="text" class="form-control" id="cargo" name="cargo" maxlength="100">
+            </div>
+
+            <!-- Campo Código Funcional -->
+            <div class="form-group">
+                <label for="codigo_funcional">Código Funcional:</label>
+                <input type="text" class="form-control" id="codigo_funcional" name="codigo_funcional" maxlength="100">
+            </div>
+            
+            <!-- Campo Tipo Cargo -->
+            <div class="form-group">
+                <label for="tipo_cargo">Tipo de Cargo:</label>
+                <input type="text" class="form-control" id="tipo_cargo" name="tipo_cargo" maxlength="100">
+            </div>
+
+            <!-- Campo Nascimento -->
+            <div class="form-group">
+                <label for="nascimento">Nascimento:</label>
+                <input type="date" class="form-control" id="nascimento" name="nascimento">
+            </div>
+
+            <!-- Campo Data Admissão -->
+            <div class="form-group">
+                <label for="data_admissao">Data de Admissão:</label>
+                <input type="date" class="form-control" id="data_admissao" name="data_admissao">
+            </div>
+
+            <!-- Campo Data de Saída -->
+            <div class="form-group">
+                <label for="data_saida">Data de Saída:</label>
+                <input type="date" class="form-control" id="data_saida" name="data_saida">
+
+            <button type="submit" class="btn btn-primary">Cadastrar Funcionário</button>
+        </form>
+    </div>
+
+    <!-- Scripts do Bootstrap (opcional, mas recomendado) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

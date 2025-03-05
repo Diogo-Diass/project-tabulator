@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionário</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static "tabulator.min.css" %}">
+    <link rel="stylesheet" href="{% static "tabela.css" %}">
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Lista de Funcionário</h2>
+
+        <div id="example-table"></div>
+       
+    </div>
+
+    <script>
+        window.dados_funcionarios = {{ dados_funcionarios|safe }};
+        window.url_ajax =  "{% url 'sua_view_ajax' %}"
+    </script>
+
+    <script src="{% static 'tabulator.min.js' %}"></script>
+    <script src="{% static 'lista_dados.js' %}"></script>
+</body>
+</html>

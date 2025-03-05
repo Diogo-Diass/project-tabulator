@@ -1,0 +1,50 @@
+/* Estilo básico para a tabela */
+#example-table {
+    margin-top: 20px;
+    font-family: Arial, sans-serif; /* Define uma fonte mais agradável */
+    border-collapse: collapse;
+    width: 100%; /* Faz a tabela ocupar todo o espaço disponível */
+}
+
+.tabulator .tabulator-header {
+    background-color: #f4f4f4; /* Cor de fundo do cabeçalho */
+    font-weight: bold;
+    color: #333; /* Cor do texto no cabeçalho */
+}
+
+.tabulator .tabulator-cell {
+    padding: 10px;
+    border: 1px solid #ddd; /* Adiciona bordas finas nas células */
+}
+
+.tabulator .tabulator-row {
+    background-color: #fff; /* Cor de fundo das linhas */
+}
+
+.tabulator .tabulator-row:hover {
+    background-color: #f2f2f2; /* Cor ao passar o mouse por cima da linha */
+}
+
+/* Ajusta o filtro de pesquisa no cabeçalho */
+.tabulator-header-filter {
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Ajuste para botões de paginação */
+.tabulator .tabulator-paginator {
+    padding: 10px;
+    text-align: center;
+}
+
+.tabulator .tabulator-paginator .page {
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tabulator .tabulator-paginator .page.selected {
+    font-weight: bold;
+}
